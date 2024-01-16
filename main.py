@@ -1,7 +1,11 @@
 from core.canny import getEdgesCanny
 
+from inputmode.image import getSampleImages
 
-getEdgesCanny()
+# use sample image
+img,img_gray = getSampleImages()
+
+getEdgesCanny(img_gray)
 
 
 

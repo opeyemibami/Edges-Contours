@@ -21,10 +21,10 @@ def main():
 
     return
 
-def getEdgesCanny():
-    from inputmode.image import getSampleImages
-    # img = cv.imread(sampleImg_path,cv.IMREAD_GRAYSCALE)
-    img,img_gray = getSampleImages()
+def getEdgesCanny(img_gray=None):
+    if img_gray==None:
+        print()
+
     # edge detection
     img_edge = cv.Canny(img_gray,130,170)
     # dilate
